@@ -450,6 +450,7 @@ public class MainActivity extends BaseLanguageActivity implements FragmentManage
             @SuppressLint("RestrictedApi") final Deque<NavBackStackEntry> backStack = navController.getBackStack();
             setupMenu(backStack.size(), destinationId);
             binding.bottomNavView.setVisibility(SHOW_BOTTOM_VIEW_DESTINATIONS.contains(destinationId) ? View.VISIBLE : View.GONE);
+            binding.bottomNavView.getMenu().getItem(3).setVisible(settingsHelper.getBoolean(Constants.PREF_DISCOVER_VISIBLE));
         });
     }
 

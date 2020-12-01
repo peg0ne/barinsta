@@ -28,6 +28,7 @@ import static awais.instagrabber.utils.Constants.INSTADP;
 import static awais.instagrabber.utils.Constants.MARK_AS_SEEN;
 import static awais.instagrabber.utils.Constants.MUTED_VIDEOS;
 import static awais.instagrabber.utils.Constants.PREF_DARK_THEME;
+import static awais.instagrabber.utils.Constants.PREF_DISCOVER_VISIBLE;
 import static awais.instagrabber.utils.Constants.PREF_HASHTAG_POSTS_LAYOUT;
 import static awais.instagrabber.utils.Constants.PREF_LIGHT_THEME;
 import static awais.instagrabber.utils.Constants.PREF_LIKED_POSTS_LAYOUT;
@@ -127,7 +128,7 @@ public final class SettingsHelper {
 
     @StringDef({DOWNLOAD_USER_FOLDER, FOLDER_SAVE_TO, AUTOPLAY_VIDEOS, SHOW_QUICK_ACCESS_DIALOG, MUTED_VIDEOS,
                        CUSTOM_DATE_TIME_FORMAT_ENABLED, MARK_AS_SEEN, DM_MARK_AS_SEEN, INSTADP, CHECK_ACTIVITY,
-                       CHECK_UPDATES, SWAP_DATE_TIME_FORMAT_ENABLED})
+                       CHECK_UPDATES, SWAP_DATE_TIME_FORMAT_ENABLED, PREF_DISCOVER_VISIBLE})
     public @interface BooleanSettings {}
 
     @StringDef({PREV_INSTALL_VERSION})

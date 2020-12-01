@@ -49,6 +49,7 @@ public final class Constants {
     public static final String EXTRAS_END_CURSOR = "endCursor";
     public static final String FEED = "feed";
     public static final String FEED_ORDER = "feedOrder";
+    public static final String PREF_DISCOVER_VISIBLE = "discoveryVisible";
 
     // Notification ids
     public static final int ACTIVITY_NOTIFICATION_ID = 10;

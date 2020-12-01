@@ -16,6 +16,7 @@ import androidx.preference.PreferenceScreen;
 import androidx.preference.PreferenceViewHolder;
 import androidx.preference.SwitchPreferenceCompat;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.switchmaterial.SwitchMaterial;
 
 import java.text.SimpleDateFormat;
@@ -52,6 +53,7 @@ public class SettingsPreferencesFragment extends BasePreferencesFragment {
         generalCategory.addPreference(getUpdateCheckPreference());
         // generalCategory.addPreference(getAutoPlayVideosPreference());
         generalCategory.addPreference(getAlwaysMuteVideosPreference());
+        generalCategory.addPreference(getDiscoveryTabPreference());
 
         // screen.addPreference(getDivider(context));
         // final PreferenceCategory themeCategory = new PreferenceCategory(context);
@@ -135,6 +137,16 @@ public class SettingsPreferencesFragment extends BasePreferencesFragment {
         preference.setDialogTitle(R.string.pref_start_screen);
         preference.setEntries(R.array.main_nav_ids_values);
         preference.setEntryValues(values);
+        preference.setIconSpaceReserved(false);
+        return preference;
+    }
+
+    private Preference getDiscoveryTabPreference() {
+        final  Context context = getContext();
+        if (context == null) return null;
+        final  SwitchPreferenceCompat preference = new SwitchPreferenceCompat(context);
+        preference.setKey(Constants.PREF_DISCOVER_VISIBLE);
+        preference.setTitle(R.string.pref_discover_visible);
         preference.setIconSpaceReserved(false);
         return preference;
     }
